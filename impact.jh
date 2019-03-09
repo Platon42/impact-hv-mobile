@@ -1,15 +1,36 @@
-entity Projects {
+entity User {
+	login String required,
+    password String required,
+    project String,
+	role String required
+}
+
+entity FavoriteProject {
+	user String,
+    project String
+}
+
+entity Investment {
+	user String,
+    project String,
+    transactionDate LocalDate,
+    amount Long 
+}
+
+entity Project {
+	user String,
 	description String,
 	requiredAmt Long,
 	projectName String,
-	currency varchar String,
+	currency String,
 	country String,
 	region String,
 	author String,
 	imgRef String
 }
 
-entity Measures {
+entity Measure {
+	challenge String,
 	peopleSupportedPoverty Long,
 	peopleReceivedMedicalTreatment Long,
 	kwhCleanEnergyPerYear Long,
@@ -20,13 +41,26 @@ entity Measures {
 	jobsCreated Long
 }
 
-entity Challenges {
+entity Challenge {
+	project String,
+    measure String,
 	requiredQuantity Long,
 	challengeDesc String
 }
 
-entity Users {
-	login String,
-	password String,
-	role String
+relationship OneToMany {
+  User{login} to FavoriteProject{user}
+  FavoriteProject{project} to Project{projectName}
+  User{login} to Investment{user}
+  Project{projectName} to Challenge{project}
 }
+
+relationship ManyToOne {
+	Investment{project} to Project{projectName}
+}
+relationship OneToOne {
+  Challenge{measure} to Measure{challenge}
+}
+
+dto * with mapstruct
+service * with serviceClass
