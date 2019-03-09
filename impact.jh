@@ -1,0 +1,32 @@
+entity Projects {
+	description String,
+	requiredAmt Long,
+	projectName String,
+	currency varchar String,
+	country String,
+	region String,
+	author String,
+	imgRef String
+}
+
+entity Measures {
+	peopleSupportedPoverty Long,
+	peopleReceivedMedicalTreatment Long,
+	kwhCleanEnergyPerYear Long,
+	tonsCo2EmissionsOffset Long,
+	tonsPlasticRecycled Long,
+	tonsWasteRecycled Long,
+	peopleReceivedAccessEducation Long,
+	jobsCreated Long
+}
+
+entity Challenges {
+	requiredQuantity Long,
+	challengeDesc String
+}
+
+entity Users {
+	login String required,
+	password String required,
+	role String required
+}
