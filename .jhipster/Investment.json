@@ -1,0 +1,47 @@
+{
+    "name": "Investment",
+    "fields": [
+        {
+            "fieldName": "user",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "project",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "transactionDate",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "amount",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "project",
+            "otherEntityRelationshipName": "projectName",
+            "relationshipName": "project",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "member",
+            "otherEntityRelationshipName": "login",
+            "relationshipName": "user",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190309113018",
+    "entityTableName": "investment",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "ImpactHV",
+    "applications": "*",
+    "microserviceName": "ImpactHV"
+}

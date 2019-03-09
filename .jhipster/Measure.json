@@ -1,0 +1,60 @@
+{
+    "name": "Measure",
+    "fields": [
+        {
+            "fieldName": "challenge",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "peopleSupportedPoverty",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "peopleReceivedMedicalTreatment",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "kwhCleanEnergyPerYear",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "tonsCo2EmissionsOffset",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "tonsPlasticRecycled",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "tonsWasteRecycled",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "peopleReceivedAccessEducation",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "jobsCreated",
+            "fieldType": "Long"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "challenge",
+            "otherEntityRelationshipName": "measure",
+            "relationshipName": "challenge",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190309113020",
+    "entityTableName": "measure",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "ImpactHV",
+    "applications": "*",
+    "microserviceName": "ImpactHV"
+}

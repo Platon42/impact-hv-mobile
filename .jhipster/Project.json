@@ -1,0 +1,72 @@
+{
+    "name": "Project",
+    "fields": [
+        {
+            "fieldName": "user",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "description",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "requiredAmt",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "projectName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "currency",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "country",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "region",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "author",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "imgRef",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "challenge",
+            "otherEntityRelationshipName": "project",
+            "relationshipName": "projectName"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "favoriteProject",
+            "otherEntityRelationshipName": "project",
+            "relationshipName": "projectName",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "investment",
+            "otherEntityRelationshipName": "project",
+            "relationshipName": "projectName"
+        }
+    ],
+    "changelogDate": "20190309113019",
+    "entityTableName": "project",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "ImpactHV",
+    "applications": "*",
+    "microserviceName": "ImpactHV"
+}
