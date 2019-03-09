@@ -1,0 +1,48 @@
+{
+    "name": "Challenge",
+    "fields": [
+        {
+            "fieldName": "project",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "measure",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "requiredQuantity",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "challengeDesc",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "measure",
+            "otherEntityRelationshipName": "challenge",
+            "relationshipName": "measure",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "project",
+            "otherEntityRelationshipName": "projectName",
+            "relationshipName": "project",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20190309113021",
+    "entityTableName": "challenge",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "ImpactHV",
+    "applications": "*",
+    "microserviceName": "ImpactHV"
+}

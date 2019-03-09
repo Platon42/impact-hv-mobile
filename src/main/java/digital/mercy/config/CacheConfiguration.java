@@ -36,6 +36,15 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
+            cm.createCache(digital.mercy.domain.Member.class.getName(), jcacheConfiguration);
+            cm.createCache(digital.mercy.domain.Member.class.getName() + ".logins", jcacheConfiguration);
+            cm.createCache(digital.mercy.domain.FavoriteProject.class.getName(), jcacheConfiguration);
+            cm.createCache(digital.mercy.domain.FavoriteProject.class.getName() + ".projects", jcacheConfiguration);
+            cm.createCache(digital.mercy.domain.Investment.class.getName(), jcacheConfiguration);
+            cm.createCache(digital.mercy.domain.Project.class.getName(), jcacheConfiguration);
+            cm.createCache(digital.mercy.domain.Project.class.getName() + ".projectNames", jcacheConfiguration);
+            cm.createCache(digital.mercy.domain.Measure.class.getName(), jcacheConfiguration);
+            cm.createCache(digital.mercy.domain.Challenge.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

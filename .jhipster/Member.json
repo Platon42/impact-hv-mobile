@@ -1,0 +1,54 @@
+{
+    "name": "Member",
+    "fields": [
+        {
+            "fieldName": "login",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "password",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "project",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "role",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "favoriteProject",
+            "otherEntityRelationshipName": "user",
+            "relationshipName": "login"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "investment",
+            "otherEntityRelationshipName": "user",
+            "relationshipName": "login"
+        }
+    ],
+    "changelogDate": "20190309113016",
+    "entityTableName": "member",
+    "dto": "mapstruct",
+    "pagination": "no",
+    "service": "serviceClass",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "ImpactHV",
+    "applications": "*",
+    "microserviceName": "ImpactHV"
+}

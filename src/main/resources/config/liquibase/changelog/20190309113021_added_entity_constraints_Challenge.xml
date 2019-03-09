@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+    <!--
+        Added the constraints for entity Challenge.
+    -->
+    <changeSet id="20190309113021-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="measure_id"
+                                 baseTableName="challenge"
+                                 constraintName="fk_challenge_measure_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="measure"/>
+
+        <addForeignKeyConstraint baseColumnNames="project_id"
+                                 baseTableName="challenge"
+                                 constraintName="fk_challenge_project_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="project"/>
+
+    </changeSet>
+</databaseChangeLog>
