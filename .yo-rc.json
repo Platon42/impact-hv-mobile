@@ -1,0 +1,45 @@
+{
+  "generator-jhipster": {
+    "applicationType": "microservice",
+    "gitCompany": "",
+    "baseName": "ImpactHV",
+    "packageName": "digital.mercy",
+    "packageFolder": "digital/mercy",
+    "serverPort": 7878,
+    "serviceDiscoveryType": "consul",
+    "authenticationType": "jwt",
+    "uaaBaseName": "../uaa",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": false,
+    "enableSwaggerCodegen": "true",
+    "messageBroker": false,
+    "buildTool": "maven",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [
+      "cucumber"
+    ],
+    "enableTranslation": false,
+    "nativeLanguage": "en",
+    "languages": [
+      "en"
+    ],
+    "clientFramework": "angularX",
+    "jhiPrefix": "jhi",
+    "jhipsterVersion": "5.8.2",
+    "jwtSecretKey": "NWIxYjI2ZTQwMTA4Yzk3YWQ1ZGJmMmE1YmIxNDc1ZGQ0ZGMwNWZlMjk3ZmM0MjI3OWQ2OWEzM2YxZTFjOGUyMjkxZDEwY2EzNmQ3ODFhMzIwNjkyM2I5OWQ2Nzc4ODc4YmU0MzYzYTg4MDFiMDYwNTk4ZWMzYTI0NjFjNDZlZDg=",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "skipClient": true,
+    "skipUserManagement": true
+  },
+  "git-provider": "GitHub",
+  "git-company": "Platon42",
+  "repository-name": "impact-hv-mobile"
+}
